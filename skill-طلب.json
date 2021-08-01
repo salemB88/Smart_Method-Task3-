@@ -1,0 +1,426 @@
+{
+  "intents": [
+    {
+      "intent": "الصنف",
+      "examples": [
+        {
+          "text": "ابا اطلب كابتشينو"
+        },
+        {
+          "text": "ابا اطلب واحد لاتيه"
+        },
+        {
+          "text": "طلبي واحد كابتشينو ومويهتو"
+        },
+        {
+          "text": "طلبي واحد لاتيه"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "ترحيب",
+      "examples": [
+        {
+          "text": "السلام عليكم"
+        },
+        {
+          "text": "مرحبا"
+        },
+        {
+          "text": "ي هلا"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "شكر",
+      "examples": [
+        {
+          "text": "شكرا بس كذا"
+        },
+        {
+          "text": "شكرا لك ، لا ما احتاج"
+        },
+        {
+          "text": "لا"
+        },
+        {
+          "text": "لا فقط هذا الطلب"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "طلب",
+      "examples": [
+        {
+          "text": "ابا اطلب"
+        },
+        {
+          "text": "اقدر اطلب"
+        },
+        {
+          "text": "اقدر اطلب قهوة"
+        },
+        {
+          "text": "صغير"
+        },
+        {
+          "text": "ودي اطلب قهوة"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "منيو",
+      "examples": [
+        {
+          "text": "اقدر اشوف المنيو"
+        },
+        {
+          "text": "ايش المنيو"
+        },
+        {
+          "text": "ايش عندكم"
+        },
+        {
+          "text": "ايش عندكم طلبات"
+        },
+        {
+          "text": "ايش عندكم مشروبات"
+        },
+        {
+          "text": "وريني الطلبات"
+        },
+        {
+          "text": "وريني المنيو"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "اسم-الطلب",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "اسبيرسو",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "تركي",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "فلاتوايت",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "قهوة عربي",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "كابتشينو",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "كرك",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "لاتيه",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "موكا",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "موهيتو",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "مويا",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "حار-بارد",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "بارد",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "حار",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "حجم-الطلب",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "سمول",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "‎‫صغير‬‎‬‬‎‬‎",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "‎‫ كبير‬‎‬‎",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "لارج",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "مديم",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "‎‫ وسط‬‎‬‎",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "اكيد تقدر تطلب ، ايش طلبك يالغالي؟\nالمنيو:\n1- كرك\n2- قهوة عربي\n3- اسبيريسو\n4- كابتيشنو\n5- هوت شوكلت\n6- موهيتو\n7 - مويا\n"
+              },
+              {
+                "text": "ابشر ، ايش طلبك يالغالي؟\nالمنيو:\n1- كرك\n2- قهوة عربي\n3- اسبيريسو\n4- كابتيشنو\n5- هوت شوكلت\n6- موهيتو\n7 - مويا"
+              },
+              {
+                "text": "ولا يهمك ، ياليت تبلغني بالطلب؟\nالمنيو:\n1- كرك\n2- قهوة عربي\n3- اسبيريسو\n4- كابتيشنو\n5- هوت شوكلت\n6- موهيتو\n7 - مويا"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#طلب",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1627392761976",
+      "previous_sibling": "node_9_1627662560357"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "تمام ، حار او بارد؟"
+              },
+              {
+                "text": "ابشر ، بس الطلب تحبه حار او بارد؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "parent": "node_6_1627393302389",
+      "conditions": "@حجم-الطلب",
+      "dialog_node": "node_5_1627393538287"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ابشر ، بس ايش الحجم ، متوفر عندنا (سمول ، مديم ،لارج) ؟"
+              },
+              {
+                "text": "ولا يهمك ، بس ابشر ، بس ايش حجم الطلب ، متوفر عندنا (سمول ، مديم ،لارج)  ؟"
+              },
+              {
+                "text": "ابشر ، بس بس ياليت تبلغني بحجم الطلب ، متوفر عندنا (سمول ، مديم ،لارج) ؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1627392761976",
+      "conditions": "@اسم-الطلب",
+      "dialog_node": "node_6_1627393302389"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "تمام ، اكدت طلبتك تحتاج اي شي ثاني يالغالي؟"
+              },
+              {
+                "text": "ولايهمك ، اكدت طلبتك تحتاج اي شي ثاني يالغالي؟"
+              },
+              {
+                "text": "تمام ، اكدت طلبك يالغالي"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1627393538287",
+      "conditions": "@حار-بارد",
+      "dialog_node": "node_6_1627393690096"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": ": ي هلا ، كمل عملية الدفع من خلال الرابط التالي"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#شكر",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_9_1627401178340",
+      "previous_sibling": "node_3_1627392761976"
+    },
+    {
+      "type": "standard",
+      "title": "منيو",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "المنيو:\n1- كرك\n2- قهوة عربي\n3- اسبيريسو\n4- كابتيشنو\n5- هوت شوكلت\n6- موهيتو\n7 - مويا"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#منيو",
+      "dialog_node": "node_9_1627662560357",
+      "previous_sibling": "مرحبا"
+    },
+    {
+      "type": "standard",
+      "title": "أي شيء آخر",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "لم أفهم، يمكنك محاولة اعادة الصياغة"
+              },
+              {
+                "text": "هل يمكنك اعادة صياغة عبارتك؟ أنا لا فهم"
+              },
+              {
+                "text": "لم أفهم قصدك"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "أي شيء آخر",
+      "previous_sibling": "node_9_1627401178340",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "مرحبا",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ي هلا كيف اقدر اخدمك يالغالي؟"
+              },
+              {
+                "text": " ي مرحبا امر يالغالي كيف اقدر اخدمك؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#ترحيب",
+      "dialog_node": "مرحبا"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": ":هل قصدت",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "كل ما سبق خطأ"
+    },
+    "human_agent_assist": {
+      "prompt": ":هل قصدت"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "طلب",
+  "language": "ar",
+  "description": ""
+}
